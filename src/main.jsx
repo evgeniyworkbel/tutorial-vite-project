@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Root, { loader as rootLoader, action as rootAction } from "./routes/root";
+import { loader as contactLoader } from "./routes/root";
 import Contact from "./routes/contact";
 import ErrorPage from "./error-page";
 import './index.css'
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       {
         path: "contacts/:contactId",
         element: <Contact />,
+        loader: contactLoader,
       },
     ],
   },
